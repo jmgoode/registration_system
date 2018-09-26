@@ -4,7 +4,7 @@ The program is a basic system for the maintenance of students' academic records 
 
 ## Getting Started 
 
-- Call `./registration.py` or `python3 registration.py` to start the interactive command prompt
+- Call `python3 registration.py` to start the interactive command prompt
 - Type `14` or `Ctrl-C` to quit
 
 **Menu**  
