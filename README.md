@@ -2,7 +2,14 @@
 
 The program is a basic system for the maintenance of students' academic records at a university. `registrar.py` contains program logic, and `registration.py` allows the user to run the program in the command line. If you would like data to persist beyond the current session, users must save the data to a .pickle file. 
 
-**Course**  
+## Getting Started 
+
+- Simply call `./registration.py` and the command line will return a series of options. 
+- Type `Ctrl-C` or `exit` to quit
+
+## Features & Functionality  
+
+#### Course  
 A class representing a course offered (possibly repeatedly) at a university (e.g., MPCS 55001 at University of Chicago).  
   
 Attributes
@@ -11,7 +18,7 @@ Attributes
 - name (e.g., Algorithms)
 - credits (An integer value. The number of credits awarded for passing the course.)
 
-**CourseOffering**  
+#### CourseOffering 
 A class representing a specific offering of a course. This class combines the general idea of a course (e.g., Algorithms offered on a regular basis at the school) with a specific instance of it being offered (e.g., Fall 2017).    
 
 Attributes  
@@ -21,29 +28,32 @@ Attributes
 - year (e.g., 2017)
 - quarter (e.g., FALL)
 
-Behavior  
+Behavior    
 - _register_students_ : Takes an arbitrary number of instances of the student class and adds the students to the course.
 - _get_students_ : Returns a list of instances of the Student class representing those that have registered for the course.
 - _submit_grade_ : Takes an instance of the student class OR a student username and a letter grade (e.g., A+, A, A-, B+, B, B-, …) and sets the student's letter grade for the course. If the grade has already been set, this operation overwrites the existing grade.  
 - _get_grade_ : Takes an instance of the student class OR a student username and returns the student's letter grade.
-Jason Goode
-Institution
-A class representing a university (e.g., University of Chicago).
+
+#### Institution  
+A class representing a university (e.g., University of Chicago).  
+
 Attributes
-• name
-• domain
-Behavior
-• list_students : Return a list of all students enrolled.
-• enroll_student : Accept an instance of the Student class and adds it.
-• list_instructors : Return a list of all instructors employed at the university.
-• hire_instructor : Accept an instance of the instructor class and add it.
-• list_course_catalog: Return a list of all courses available at the university.
-• list_course_schedule : Given a year and quarter, return a list of course offerings in the specified time period.
-Optionally accept a department name argument. If the department name argument is given, filter the results list to exclude course offerings from any other department.
-• add_course : Adds an instance of the Course class to the university's course catalog.
-• add_course_offering : Takes an instance of the Course class and adds it to the university's course schedule.
-Person
-A class representing the people involved with the university.
+- name (e.g. University of Chicago)
+- domain (e.g. `@uchicago.edu`)
+
+Behavior  
+- _list_students_ : Return a list of all students enrolled.
+- _enroll_student_ : Accept an instance of the Student class and adds it.
+- _list_instructors_ : Return a list of all instructors employed at the university.
+- _hire_instructor_ : Accept an instance of the instructor class and add it.
+- _list_course_catalog_: Return a list of all courses available at the university.
+- _list_course_schedule_ : Given a year and quarter, return a list of course offerings in the specified time period.  Optionally accept a department name argument. If the department name argument is given, filter the results list to exclude course offerings from any other department.
+- _add_course_ : Adds an instance of the Course class to the university's course catalog.
+- _add_course_offering_ : Takes an instance of the Course class and adds it to the university's course schedule.
+
+#### Person  
+A class representing the people involved with the university.  
+
 Attributes
 • last_name
 • first_name
