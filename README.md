@@ -4,8 +4,24 @@ The program is a basic system for the maintenance of students' academic records 
 
 ## Getting Started 
 
-- Simply call `./registration.py` and the command line will return a series of options. 
-- Type `Ctrl-C` or `exit` to quit
+- Call `./registration.py` or `python3 registration.py` to start the interactive command prompt
+- Type `14` or `Ctrl-C` to quit
+
+**Menu**  
+1. Create a course  
+2. Schedule a course offering
+3. List course catalog 
+4. List course schedule
+5. Hire an instructor
+6. Assign an instructor to a course
+7. Enroll a student
+8. Register a student for a course
+9. List enrolled students
+10. List students registered for a course
+11. List faculty
+12. Submit student grade
+13. Get student records
+14. Exit
 
 ## Features & Functionality  
 
@@ -52,55 +68,27 @@ Behavior
 - _add_course_offering_ : Takes an instance of the Course class and adds it to the university's course schedule.
 
 #### Person  
-A class representing the people involved with the university.  
-
+A class representing the people involved with the university.    
+  
 Attributes
-• last_name
-• first_name
-• school (A reference to an instance of the Institution class.)
-• date_of_birth (An instance of the datetime.datetime class.)
-• username (Equivalent to UChicago CNetID. Used as a unique identifier across the system.)
-• affiliation (e.g., student, faculty, staff, etc)
-• email (A property. Should resolve to [self.username]@[self.school.domain])
-Instructor
-A class representing an instructor of a course at a university. Inherits from Person class.
-Behavior
-• list_courses : Return a list of courses taught by the instructor in reverse-chronological order (most recent first).
-Jason Goode
-Student
+- last_name
+- first_name
+- school (A reference to an instance of the Institution class.)
+- date_of_birth (An instance of the datetime.datetime class.)
+- username (Equivalent to UChicago CNetID. Used as a unique identifier across the system.)
+- affiliation (e.g., student, faculty, staff, etc)
+- email (A property. Should resolve to [self.username]@[self.school.domain])
+
+#### Instructor
+A class representing an instructor of a course at a university. Inherits from Person class.  
+
+Behavior  
+- _list_courses_ : Return a list of courses taught by the instructor in reverse-chronological order (most recent first).
+
+#### Student  
 A class representing a student at a university. Inherits from Person class.
-Behavior
-• list_courses : Return a list of courses the student has taken (or is currently registered for) in reverse-chronological order (most recent first).
-• credits : Returns the number of credits earned toward graduation. Assume all credits are earned toward a single degree.
-• gpa : Returns the student's grade point average (GPA) calculated as the average of grade points earned for each course, weighted by credits earned for the corresponding course. Pluses and minuses are available
-Registration.py
-This script makes an interactive command prompt that allows users to use the registration system
-Menu
-1 Create a course
-2 Schedule a course offering
-3 List course catalog
-4 List course schedule
-5 Hire an instructor
-6 Assign an instructor to a course
-7 Enroll a student
-8 Register a student for a course
-9 List enrolled students
-10 List students registered for a course
-11 List faculty
-12 Submit student grade
-13 Get student records
-14 Exit
-Actions
-• If the user enters 1, 2, 5, or 7, for instance, present the user with a series of prompts for the relevant information for creating a course, course offering, instructor, or student instance, respectively.
-• If the user enters 3, display a list of the courses in the course catalog and their relevant information.
-• If the user enters 4, prompt the user for a year and quarter. Then display a list of the courses offered in the given year and quarter and their relevant information.
-• If the user enters 6, prompt the user for an instructor username and a course department , number , section_number , year , and quarter . These values should
-Jason Goode
-uniquely determine a single instance of the CourseOffering class. Then associate that instructor with the given course offering.
-• If the user enters 8, prompt the user for a student username , course department , number , section_number , year , and quarter . These values should uniquely determine a single CourseOffering . Associate the given student with the given course offering.
-• If the user enters 9, display a list of all students enrolled at the university, along with their relevant info.
-• If the user enters 10, prompt the user for the course department , number , section_number , year , and quarter . Then display the list of students enrolled in the given course.
-• If the user enters 12, prompt the user for a student username , the identifying information for a course offering, and a letter grade. Update the student's records accordingly.
-• If the user enters 13, prompt the user for a student username . After the username is supplied, display the student records, including GPA, credits earned, and transcript
-• If the user enters 14, the program should exit and ask the user if they would like to save their data (to a new or existing .pickle file)
-• If the user enters anything besides 1-14, the program will re-prompt for a valid entry
+
+Behavior  
+- list_courses : Return a list of courses the student has taken (or is currently registered for) in reverse-chronological order (most recent first).
+- credits : Returns the number of credits earned toward graduation. Assume all credits are earned toward a single degree.
+- gpa : Returns the student's grade point average (GPA) calculated as the average of grade points earned for each course, weighted by credits earned for the corresponding course. Pluses and minuses are available  
