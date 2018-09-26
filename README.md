@@ -89,6 +89,6 @@ Behavior
 A class representing a student at a university. Inherits from Person class.
 
 Behavior  
-- list_courses : Return a list of courses the student has taken (or is currently registered for) in reverse-chronological order (most recent first).
-- credits : Returns the number of credits earned toward graduation. Assume all credits are earned toward a single degree.
-- gpa : Returns the student's grade point average (GPA) calculated as the average of grade points earned for each course, weighted by credits earned for the corresponding course. Pluses and minuses are available  
+- _list_courses_ : Return a list of courses the student has taken (or is currently registered for) in reverse-chronological order (most recent first).
+- _credits_ : Returns the number of credits earned toward graduation. Assume all credits are earned toward a single degree.
+- _gpa_ : Returns the student's grade point average (GPA) calculated as the average of grade points earned for each course, weighted by credits earned for the corresponding course. Pluses and minuses are available  
